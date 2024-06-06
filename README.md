@@ -1,2 +1,8 @@
 # Properks-study
-I'll record what I learn
+여기는 제가 공부한 내용들을 기록하고 정리하는 repository입니다. 다양한 주제에 대한 학습 내용을 포함하고 있고 필요할 때 쉽게 찾아볼 수 있도록 구조화하여 정리합니다.
+
+## `폴더`
+
+### `deployment`
+
+- 이 repoistory에는 프로젝트 배포에 관련된 내용을 정리합니다.
