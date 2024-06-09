@@ -64,7 +64,7 @@
    ```
 
    + tag는 생략 가능, 생략 시 자동으로 latest가 tag로 붙는다.
-   + 2-1에서의 필요한 버전은 오류와 같이 나오는데 이를 `--platform`뒤에 넣으면 된다.
+   + `{version}`에 필요한 버전은 오류에서 `linux/amd64/v3`처럼 보여준다.
    
    <details>
    <summary>Example</summary>
@@ -94,4 +94,28 @@
    
 
 ### 3. EC2에 도커 설치 및 환경 설정
+
+1. EC2 update and upgrade
+
+   ```shell
+   sudo apt update
+   ```
+
+   ```shell
+   sudo apt upgrade
+   ```
+   
+2. EC2에 Docker 설치
+
+   ```shell
+   sudo apt install docker.io
+   ```
+3. Permission denied error 해결
+
+   ```shell
+   sudo chmod 666 /var/run/docker.sock
+   ```
+   `/var/run/docker.sock`의 권한을 소유자, 그룹, 사용자가 읽기 쓰기를 할 수 있도록 바꾸어 준다.
+
+
 ### 4. Docker hub에서 image를 pull하고 실행
