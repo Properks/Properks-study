@@ -119,3 +119,51 @@
 
 
 ### 4. Docker hub에서 image를 pull하고 실행
+
+1. EC2에 image pull 하기
+
+   ```shell
+   docker pull {docker username}/{image name}:{tag}
+   ```
+
+   <details>
+   <summary>Example</summary>
+
+   ```shell
+   docker pull user/image:tag
+   ```
+   </details> 
+
+
+2. EC2에서 image 실행
+
+   2-1. 환경 변수 없이 EC2 실행
+   ```shell
+   docker run -rm -d -p 8080:8080 {docker username}/{image name}:{tag}
+   ```
+
+   <details>
+   <summary>Example</summary>
+
+   ```shell
+   docker run -rm -d -p 8080:8080 user/image:tag
+   ```
+   </details> 
+
+   2-2. 환경 변수 추가하여 EC2 실행
+
+   ```shell
+   docker run -e DB_URL=DB_URL -e DB_USERNAME=DB_USERNAME -e DB_PASSWORD=DB_PASSWORD -rm -d -p 8080:8080 {docker username}/{image name}:{tag}
+   ```
+
+   <details>
+   <summary>Example</summary>
+
+   ```shell
+   docker run -e DB_URL=jdbc:mysql://localhost:3306/schema -e DB_USERNAME=root -e DB_PASSWORD=1234 -rm -d -p 8080:8080 {docker username}/{image name}:{tag}
+   ```
+   </details> 
+   
+   + 환경 변수가 여러 개일 경우 -e를 앞에 붙이면서 추가해준다.
+   + 해당 build하는 과정에서 permission denied error가 발생할 수 있다.
+     + error 발생하는 경우 [해당 경로](#3-ec2에-도커-설치-및-환경-설정)의 3번 문항으로 이동하여 명령어를 실행하면 된다.
