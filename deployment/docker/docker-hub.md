@@ -120,7 +120,23 @@
 
 ### 4. Docker hub에서 image를 pull하고 실행
 
-1. EC2에 image pull 하기
+1. EC2에서 docker login
+
+   ```shell
+   docker login -u {docker id}
+   ```
+   + 명령어 입력 후 비밀번호 입력해 docker에 login하기
+
+   <details>
+   <summary>Example</summary>
+
+   ```shell
+   docker login -u docker
+   ```
+   </details> 
+
+
+2. EC2에 image pull 하기
 
    ```shell
    docker pull {docker username}/{image name}:{tag}
@@ -135,7 +151,7 @@
    </details> 
 
 
-2. EC2에서 image 실행
+3. EC2에서 image 실행
 
    2-1. 환경 변수 없이 EC2 실행
    ```shell
