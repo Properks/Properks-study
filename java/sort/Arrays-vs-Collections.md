@@ -2,18 +2,18 @@
 
 ## 목차
 
-1. 각 메소드가 사용하는 정렬 알고리즘
-    &emsp; • Arrays.sort()
+1. 각 메소드가 사용하는 정렬 알고리즘<br>
+    &emsp; • Arrays.sort()<br>
     &emsp; • Collections.sort()
-2. 두 정렬 알고리즘과 자료형의 차이
-    &emsp; • 데이터의 저장 방식
+2. 두 정렬 알고리즘과 자료형의 차이<br>
+    &emsp; • 데이터의 저장 방식<br>
     &emsp; • 각 정렬 알고리즘이 가지는 장점
 
-3. 추측
-    &emsp; • 기본형 배열에 Dual-pivot Quick Sort를 사용하는 이유
+3. 추측<br>
+    &emsp; • 기본형 배열에 Dual-pivot Quick Sort를 사용하는 이유<br>
     &emsp;• 참조형 배열에 Tim Sort를 사용하는 이유
-4. 직접 확인
-    &emsp; • 정렬 시간 결과
+4. 직접 확인<br>
+    &emsp; • 정렬 시간 결과<br>
     &emsp; • int[]에 대한 추가 결과
 5. 결론
 
@@ -94,12 +94,12 @@ Arrays.sort(Object[] a)
 위의 정렬 알고리즘 코드에서 알 수 있듯이 기본형인 int와 참조형인 Integer사이에서 발생하는 차이이다.
 
 
-1. 기본형의 저장 방식
+1. 기본형의 저장 방식<br>
 기본형은 실제 값을 스택 메모리 영역에 저장한다.
 
 <br>
 
-2. 참조형의 저장 방식
+2. 참조형의 저장 방식<br>
 참조형은 실제 데이터를 힙 메모리 영역에 저장하고 스택에는 참조(주소) 값을 저장한다.
 
 
@@ -182,5 +182,5 @@ int[]: 7.374059999999998s
 4. 참조 지역성이 좋은 `int[]`는 Dual-pivot Quick Sort가 Tim Sort에 비해 안정적인 성능을 보여준다.
 
 #### 참고자료
-정렬 알고리즘 - [The algorithm Github](https://github.com/TheAlgorithms/Java)
+정렬 알고리즘 - [The algorithm Github](https://github.com/TheAlgorithms/Java)<br>
 Tim Sort - [네이버 D2](https://d2.naver.com/helloworld/0315536)
